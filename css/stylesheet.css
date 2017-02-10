@@ -1,0 +1,238 @@
+/************   base styles   ***********/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#fbfbfb, #f8f8f8);
+  min-width: 320px;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.25em;
+  color: #6287AE;
+  letter-spacing: .05em;
+  width: 100%;
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1.3em;
+  color: #3d3d3d;
+}
+
+ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125em;
+  color: #3d3d3d;
+  text-align: center;
+  line-height: 1.25em;
+}
+
+a {
+  text-decoration: none;
+  color: #9848DE;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #751AC5;
+}
+
+.written-list {
+  text-align: left;
+  line-height: 1.5em;
+  font-size: 1.25em;
+}
+
+/************   bio formatting   ***********/
+
+.name {
+  font-weight: 700;
+}
+
+.title, .email {
+  font-weight: 300;
+}
+
+/************   layout   ***********/
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  background: linear-gradient(#519AF5, #049F91);
+}
+
+.main-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 3em;
+  color: #fff;
+  margin: auto;
+}
+
+.logo {
+  height: 220px;
+  margin: auto;
+}
+
+.primary-content {
+  width: 84%;
+  margin: 20px 8%;
+}
+
+.secondary-content {
+  display: flex;
+  flex-flow: row wrap;
+  width: 84%;
+  margin: 20px 8%;
+}
+
+.bio {
+  width: 100%;
+  margin: 20px 0 0;
+  /*background-color: #e8e8e8;*/
+}
+
+.bio img {
+  display: block;
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 50%
+}
+
+.main-footer {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: #E7E7E7;
+}
+
+.main-footer p {
+  font-size: 0.875em;
+  font-weight: 300;
+  display: inline-block;
+  width: 100%;
+  margin: 40px auto 0px;
+  text-align: center;
+  color: #9B9B9B;
+}
+
+/************ animation *******************/
+
+/* make keyframes that tell the start state and the end state of our object */
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+  opacity: 0;  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animation ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards;  /* makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.fade-in.two {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+/************   media queries   ***********/
+
+@media only screen and (min-width: 768px) {
+
+  h1 {
+    font-size: 1.75em;
+    font-weight: 700;
+  }
+
+  .main-header {
+    height: 90vh;
+  }
+
+  .main-title {
+    font-size: 4em;
+  }
+
+  .logo {
+    height: 300px
+  }
+
+  .primary-content, .secondary-content {
+    margin: 20px 10%;
+    width: 80%;
+  }
+
+  .bio {
+    width: 42.5%;
+    margin: 20px 3.5%;
+  }
+
+  .bio p {
+    font-size: 1.0625em;
+  }
+
+  .main-footer p {
+    font-size: 1em;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  h1 {
+    font-size: 2.25em;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+
+  li {
+    font-size: 1.25em;
+  }
+
+  .primary-content, .secondary-content {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .bio p {
+    font-size: 1.1875em;
+  }
+
+}
