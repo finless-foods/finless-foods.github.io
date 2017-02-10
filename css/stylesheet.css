@@ -35,12 +35,20 @@ ul {
   padding: 0;
 }
 
-li {
+.contact-info li {
   font-family: 'Lato', sans-serif;
   font-size: 1.125em;
+  line-height: 1.25em;
   color: #3d3d3d;
   text-align: center;
+}
+
+.written-list li {
+  font-family: 'Lato', sans-serif;
   line-height: 1.25em;
+  font-size: 1.125em;
+  margin-bottom: 5px;
+  text-align: left;
 }
 
 a {
@@ -51,13 +59,6 @@ a {
 a:hover {
   cursor: pointer;
   color: #751AC5;
-}
-
-.written-list li {
-  text-align: left;
-  line-height: 1.25em;
-  font-size: 1.125em;
-  margin-bottom: 5px;
 }
 
 /************   bio formatting   ***********/
