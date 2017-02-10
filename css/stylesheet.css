@@ -53,10 +53,10 @@ a:hover {
   color: #751AC5;
 }
 
-.written-list {
+.written-list li {
   text-align: left;
-  line-height: 1.5em;
-  font-size: 1.25em;
+  line-height: 1.25em;
+  font-size: 1.125em;
 }
 
 /************   bio formatting   ***********/
